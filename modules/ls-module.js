@@ -14,7 +14,13 @@ module.exports = function (fpath, ftype, callback) {
 		if ( err ){
 		    return callback( err );
 		}else {
-			callback(null, data);
+			var list = [];
+				for (var i=0; i<data.length; i++){
+					if (path.extname(data[i]) == '.'+ftype){
+						list.push(data[i]);
+					}		
+				}
+			callback(null, list);
 		}
 	})
 }

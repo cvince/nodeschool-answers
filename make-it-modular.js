@@ -4,10 +4,8 @@ var ftype = process.argv[3];
 var path = require('path');
 
 function listFiles(err, data){
-	for (var i=0; i<data.length; i++){
-		if (path.extname(data[i]) == '.'+ftype){
-			console.log(data[i]);
-		}		
+	for (var i = 0; i<data.length; i++){
+		console.log(data[i]);	
 	}
 }
 
