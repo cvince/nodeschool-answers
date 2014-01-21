@@ -15,4 +15,3 @@ var tr = through(
 	})
 
 process.stdin.pipe(split()).pipe(tr).pipe(process.stdout);
-
